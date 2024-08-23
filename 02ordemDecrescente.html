@@ -5,9 +5,9 @@
     */
 
 
-    const primNumero = Number(prompt(`Informe o primeiro número:`));
-    const segNumero = Number(prompt(`Informe o segundo número:`));
-    const tercNumero = Number(prompt(`Informe o terceiro número:`));
+    const primNumero = Number(prompt(`Informe o primeiro número:`).replace(",", "."));
+    const segNumero = Number(prompt(`Informe o segundo número:`).replace(",", "."));
+    const tercNumero = Number(prompt(`Informe o terceiro número:`).replace(",", "."));
     
     
     if(primNumero >= segNumero && primNumero >= tercNumero && (segNumero >= tercNumero)) { 
