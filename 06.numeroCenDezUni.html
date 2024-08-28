@@ -13,9 +13,17 @@
     //ENTRADA
     const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000:`));
 
-    //PROCESSAMENTO
-
+   // PROCESSAMENTO
     
+   // EXTRAINDO E ELIMINANDO A UNIDADE
+   unidade = numeroInteiro % 10;
+   numeroInteiro = (numeroInteiro - unidade) / 10;
+
+    // EXTRAINDO E ELIMINANDO A DEZENA, FICA A CENTENA
+    dezena = numeroInteiro % 10;
+    numeroInteiro = (numeroInteiro - dezena) / 10;
+    centena = numeroInteiro;
+
     //SAÍDA
 
 </script>
