@@ -13,8 +13,17 @@
     const operacaoDesejada = Number(prompt(`Informe a operação desejada (Responda "+" para adição, "-" para subtração, "*" para multiplicação e "/" para divisão):`));
 
     //PROCESSAMENTO
-
-    
+    if (operacaoDesejada == "+") {
+        resultado = primeiroNumero + segundoNumero;
+    } else if (operacaoDesejada == "-") {
+        resultado = primeiroNumero - segundoNumero;
+    } else if (operacaoDesejada == "*") {
+        resultado = primeiroNumero * segundoNumero;
+    } else if (operacaoDesejada == "/") {
+        resultado = primeiroNumero / segundoNumero;
+    } else {
+        alert(`Operação Inválida.`);
+    }
     //SAÍDA
 
 </script>
