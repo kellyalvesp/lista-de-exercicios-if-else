@@ -11,11 +11,39 @@
     */
 
     //ENTRADA
-
+    const telefonema = prompt(`Telefonou para a vítima? (Responda "S" para sim e "N" para não)`);
+    const presencaLocal = prompt(`Esteve no local do crime? (Responda "S" para sim e "N" para não)`);
+    const moraPerto = prompt(`Mora perto da vítima? (Responda "S" para sim e "N" para não)`);
+    const deveVitima = prompt(`Devia para a vítima? (Responda "S" para sim e "N" para não)`);
+    const colegaVitima = prompt(`Já trabalhou com a vítima? (Responda "S" para Sim e "N" para Não)`);
 
     //PROCESSAMENTO
+    let contaResposta = 0
 
-    
+    if (telefonema == "S") {
+        contaResposta ++
+    } 
+    if (presencaLocal == "S") {
+        contaResposta ++
+    } 
+    if (moraPerto == "S") {
+        contaResposta ++
+     } 
+    if (deveVitima == "S") {
+        contaResposta ++
+    } 
+    if (colegaVitima == "S") {
+        contaResposta ++
+    }
+
     //SAÍDA
-
+    if (contaResposta == 2) {
+        alert(`Suspeito.`);
+    } else if (contaResposta == 3 || contaResposta == 4) {
+        alert(`Cúmplice.`);
+    } else if (contaResposta == 5) {
+        alert(`Assassino.`);
+    } else {
+        alert(`Inocente.`);
+    }
 </script>
