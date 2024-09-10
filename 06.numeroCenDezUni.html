@@ -13,16 +13,21 @@
     //ENTRADA
     const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000:`));
 
-   // PROCESSAMENTO
-    
-   // EXTRAINDO E ELIMINANDO A UNIDADE
+    // PROCESSAMENTO
+    let centena = numeroInteiro / 100;
+    let dezena = numeroInteiro / 10;
+    let unidade = dezena / 10;
+
+
+
+   /*// EXTRAINDO E ELIMINANDO A UNIDADE
    unidade = numeroInteiro % 10;
    numeroInteiro = (numeroInteiro - unidade) / 10;
 
     // EXTRAINDO E ELIMINANDO A DEZENA, FICA A CENTENA
     dezena = numeroInteiro % 10;
     numeroInteiro = (numeroInteiro - dezena) / 10;
-    centena = numeroInteiro;
+    centena = numeroInteiro; */
 
     //SAÍDA
 
