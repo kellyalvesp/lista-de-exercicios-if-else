@@ -10,33 +10,47 @@
     //ENTRADA
     const primeiroNumero = Number(prompt(`Informe o primeiro número:`));
     const segundoNumero = Number(prompt(`Informe o segundo número:`));
-    const operacaoDesejada = Number(prompt(`Informe a operação desejada (Responda "+" para adição, "-" para subtração, "*" para multiplicação e "/" para divisão):`));
+    const operacaoDesejada = prompt(`Informe a operação desejada (Responda "+" para adição, "-" para subtração, "*" para multiplicação e "/" para divisão):`);
 
-    //PROCESSAMENTO CAlCULO
-    let adicao = primeiroNumero + segundoNumero;
-    let subtracao = primeiroNumero - segundoNumero;
-    let multiplicacao = primeiroNumero * segundoNumero;
-    let divisao = primeiroNumero / segundoNumero;
-
-    // PROCESSAMENTO IF ELSE
-    if (operacaoDesejada == "+") {
-        alert(`${adicao}`);
-    } else if (operacaoDesejada == "-") {
-        alert(`${subtracao}`);
-    } else if (operacaoDesejada == "*") {
-        alert(`${multiplicacao}`);
-    } else if (operacaoDesejada == "/") {
-        alert(`${divisao}`);
-    } else {
-        alert(`Operação Inválida.`);
+    // PROCESSAMENTO SWITCH CASE
+    let resultado = 0;
+    switch (operacaoDesejada) {
+        case "+": 
+            resultado = primeiroNumero + segundoNumero;
+            alert(`${resultado}`);
+            break;
+        case "-": 
+            resultado = primeiroNumero - segundoNumero;
+            alert(`${resultado}`);
+            break;
+        case "*": 
+            resultado = primeiroNumero * segundoNumero;
+            alert(`${resultado}`);
+            break;
+        case "/": 
+            resultado = primeiroNumero / segundoNumero;
+            alert(`${resultado}`);
+            break;
+        default:
+            alert(`Operação Inválida!`);
     }
 
+    // PROCESSAMENTO IF ELSE
     if(resultado % 2 == 0){
         alert(`Seu número é par.`);
     } else {
         alert(`Seu número é ímpar.`);
     }
-    if(resultado > 0)
+    if(resultado > 0){
+        alert(`Positivo.`)
+    } else {
+        alert(`Negativo.`)
+    }
+    if(resultado % 1 == 0){
+        alert(`Inteiro.`)
+    } else {
+        alert(`Decimal.`)
+    }
     //SAÍDA
 
 </script>
