@@ -10,11 +10,19 @@
     */
 
     //ENTRADA
-
+    const precoProduto = Number(prompt(`Informe o preço do produto:`));
     
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+    //PROCESSAMENTO E SAÍDA
+    let resultado;
+    if (precoProduto <= 280) {
+        resultado = precoProduto * 1.2;
+    } else if (precoProduto > 280 && precoProduto <= 700) {
+        resultado = precoProduto * 1.15;
+    } else if (precoProduto > 700 && precoProduto <= 1500) {
+        resultado = precoProduto * 1,10;
+    } else {
+        resultado = precoProduto * 1.05;
+    }
+    document.write(`O aumento foi de: R$${resultado}.`);
 
 </script>
