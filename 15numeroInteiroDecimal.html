@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt(`Informe um número:`));
 
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    //PROCESSAMENTO E SAÍDA
+    /* resultado % 1 == 0 */
+    let resultado = Math.round(numero);
+    if(resultado % 1 == 0) {
+        alert(`Inteiro.`);
+    } else {
+        alert(`Decimal.`)
+    }
 </script>
