@@ -17,25 +17,16 @@
    const litrosVendidos = Number(prompt(`Informe o número de litros vendidos:`));
    const tipoCombustivel = Number(prompt(`Informe o tipo de combustível (A-álcool ou G-gasolina):`));
 
-    //PROCESSAMENTO ALCOOL
-    let alcool = (litrosVendidos * 6.10);
-    let resultado1A = alcool - ((alcool * 3) / 100);
-    let resultado2A = alcool - ((alcool * 5) / 100);
-     
-    // PROCESSAMENTO GASOLINA
-    let gasolina = (litrosVendidos * 6.50);
-    let resultado1G = gasolina - ((gasolina * 4) / 100);
-    let resultado2G = gasolina - ((gasolina * 6) / 100);
-
     // PROCESSAMENTO E SAIDA IF ELSE
+    let resultado;
     if(litrosVendidos <= 20 && tipoCombustivel == "A") {
-        alert(`Você pagará R$${resultado1A} pelo alcool.`);
+        resultado = Math.floor((litrosVendidos * 6.10) * 0.97);
     } else if(litrosVendidos > 20 && tipoCombustivel == "A") {
-        alert(`Você pagará R$${resultado2A} pelo alcool.`);
+        resultado = Math.floor((litrosVendidos * 6.10) * 0.95);
     } else if (litrosVendidos <= 20 && tipoCombustivel == "G") {
-        alert(`Você pagará R$${resultado1G} pela gasolina.`) 
+        resultado = Math.floor((litrosVendidos * 6.50) * 0.96);
     } else {
-        alert(`Você pagará R$${resultado2G} pela gasolina.`)     
+        resultado = Math.floor((litrosVendidos * 6.50) * 0.94);
     }
-
+    document.write(`Você pagará R$${resultado}.`)
 </script>
