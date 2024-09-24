@@ -14,9 +14,12 @@
     const numeroInteiro = Number(prompt(`Informe um número inteiro menor que 1000:`));
 
     // PROCESSAMENTO
-    let centena = numeroInteiro / 100;
-    let dezena = numeroInteiro / 10;
-    let unidade = dezena / 10;
+    let centena = Math.floor(numeroInteiro / 100);
+    let dezena = Math.floor((numeroInteiro % 100) / 10);
+    let unidade = (numeroInteiro % 10);
+
+    // SAÍDA
+    document.write(`A centena é ${centena}, a dezena é ${dezena} e a unidade é ${unidade}`);
 
 
 
