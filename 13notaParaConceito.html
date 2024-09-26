@@ -12,9 +12,9 @@
     */
 
     //ENTRADA
-    const nota = Number(prompt(`Informe a nota:`));
+    const nota = Number(prompt(`Informe a nota:`).replace(",", "."));
     
-    //PROCESSAMENTO
+    //PROCESSAMENTO E SAÍDA
     if(nota >= 9 && nota <= 10){
         alert(`Conceito A.`);
     } else if(nota >= 8 && nota <= 8.9){
@@ -23,12 +23,13 @@
         alert(`Conceito C.`);
     } else if(nota >= 6 && nota <= 6.9){
         alert(`Conceito D.`);
-    } else if(`nota >= 0 && nota <= 5.9`){
+    } else if(nota >= 0 && nota <= 5.9) { 
         alert(`Conceito E.`);
     } else {
-        alert(`Erro!`)
+        alert(`Erro!`);
     }
     
-    //SAÍDA
+    // ok
+
 
 </script>

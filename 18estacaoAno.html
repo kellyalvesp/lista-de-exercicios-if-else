@@ -6,11 +6,33 @@
     */
 
     //ENTRADA
+    const hemisferio = prompt(`Informe o seu hemisfério (Norte ou Sul):`);
+    const mesAtual = prompt(`Informe o mês atual:`);
 
+    //PROCESSAMENTO E SAÍDA
+    let estacao = "";
+    if (hemisferio == "Norte") {
+        if(mesAtual >= 3 && mesAtual <= 5){
+            estacao = "Primevera";
+        } else if (mesAtual >= 6 && mesAtual <= 8) {
+            estacao = "Verão";
+        } else if (mesAtual >= 9 && mesAtual <= 11) {
+            estacao = "Outono";
+        } else {
+            estacao = "Inverno";
+        }
+    } else {
+        if (mesAtual >= 3 && mesAtual <= 5) {
+            estacao = "Outuno";
+        } else if (mesAtual >= 6 && mesAtual <= 8) {
+            estacao = "Inverno";
+        } else if (mesAtual >= 9 && mesAtual <= 11) {
+            estacao = "Primavera";
+        } else {
+            estacao = "Verão";
+        }
+    }
+    document.write(`A estação atual é ${estacao}.`);
 
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-
+    // ok
 </script>
