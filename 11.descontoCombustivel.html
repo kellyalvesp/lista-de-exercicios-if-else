@@ -20,15 +20,15 @@
     // PROCESSAMENTO E SAIDA IF ELSE
     let resultado;
     if (litrosVendidos <= 20 && tipoCombustivel == "A") {
-        resultado = Math.floor((litrosVendidos * 6.10) * 0.97);
+        resultado = (litrosVendidos * 6.10) * 0.97;
     } else if (litrosVendidos > 20 && tipoCombustivel == "A") {
-        resultado = Math.floor((litrosVendidos * 6.10) * 0.95);
+        resultado = (litrosVendidos * 6.10) * 0.95;
     } else if (litrosVendidos <= 20 && tipoCombustivel == "G") {
-        resultado = Math.floor((litrosVendidos * 6.50) * 0.96);
+        resultado = (litrosVendidos * 6.50) * 0.96;
     } else {
-        resultado = Math.floor((litrosVendidos * 6.50) * 0.94);
+        resultado = (litrosVendidos * 6.50) * 0.94;
     }
-    document.write(`Você pagará R$${resultado}.`)
+    document.write(`Você pagará R$${resultado.toFixed(2).replace(".", ",")}.`);
 
     // ARRUMAR
 </script>
