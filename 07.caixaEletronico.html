@@ -8,21 +8,23 @@
     */
 
     //ENTRADA
-    const valorSaque = Number(prompt(`Informe o valor que deseja sacar:`));
-    
+    const valorSaque = Number(prompt(`Informe o valor que deseja sacar:`).replace(",", "."));
+
     //PROCESSAMENTO E SAÍDA
-    if (valorSaque < 10 || valorSaque > 600){
-        alert(`Não permitido!`);
+    if (valorSaque < 10) {
+        alert(`Valor máximo atingido!`);
+    } else if (valorSaque < 10) {
+        alert(`Valor mínimo não atingido!`);
     } else {
-        let notas100 = Math.floor(valorSaque / 100);
-    valorSaque = valorSaque - (notas100 * 100);
-        let notas50 = Math.floor(valorSaque / 50);
-    valorSaque = valorSaque - (notas50 * 50);
-        let notas10 = Math.floor(valorSaque / 10);
-    valorSaque = valorSaque - (notas10 * 10);
-        let notas5 = Math.floor(valorSaque / 5);
-    valorSaque = valorSaque - (notas5 * 5);
-        let nota1 = valorSaque;
+        let notas100 = Math.floor(valorSaque / 100)
+        valorSaque = valorSaque - (notas100 * 100)
+        let notas50 = Math.floor(valorSaque / 50)
+        valorSaque = valorSaque - (notas50 * 50)
+        let notas10 = Math.floor(valorSaque / 10)
+        valorSaque = valorSaque - (notas10 * 10)
+        let notas5 = Math.floor(valorSaque / 5)
+        valorSaque = valorSaque - (notas5 * 5)
+        let nota1 = valorSaque
     }
     document.write(`A quantidade de notas de 100 será de ${notas100} notas, a quantidade de notas de 50 será de ${notas50} notas, a quantidade de notas de 10 será de ${notas10}, a quantidade de notas de 5 será de ${notas5} e a quantidade de notas de 1 será de ${notas1} notas.`);
 
